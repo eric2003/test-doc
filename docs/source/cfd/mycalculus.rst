@@ -217,3 +217,31 @@ test1
     \frac{\partial z}{\partial y} & = \frac{\partial z}{\partial u} \frac{\partial u}{\partial y}+
     \frac{\partial z}{\partial w}
   \end{align}
+  
+  
+更准确的叙述：  
+如果函数 :math:`u=\phi(x,y)` 在点 :math:`(x,y)` 具有对 :math:`x` 及对 :math:`y`的偏导数，函数 :math:`v=\psi(y)` 在点 :math:`y` 可导，函数 :math:`z(u,v)=f(u,v)` 在对应点
+:math:`(u,v)` 具有连续偏导数，那么复合函数 :math:`\hat{z}(x,y)=f(\phi(x,y),\psi(y))=\hat{f}(x,y)` 在点 :math:`(x,y)` 的两个偏导数都存在，且有
+
+.. math::
+  \begin{align}
+    \frac{\partial \hat{z}(x,y)}{\partial x} & = \frac{\partial z(u,v)}{\partial u} \frac{\partial u(x,y)}{\partial x}+
+    \frac{\partial z(u,v)}{\partial v} \cancelto{0}{\frac{\partial v(x,y)}{\partial x}}\\
+    \frac{\partial \hat{z}(x,y)}{\partial y} & = \frac{\partial z(u,v)}{\partial u} \frac{\partial u(x,y)}{\partial y}+
+    \frac{\partial z(u,v)}{\partial v} \cancelto{\frac{\mathrm{d} v(y)}{\mathrm{d} y}}{\frac{\partial v(x,y)}{\partial y}}
+  \end{align}    
+
+.. math::
+  \begin{align}
+    \frac{\partial \hat{z}(x,y)}{\partial x} & = \frac{\partial z(u,v)}{\partial u} \frac{\partial u(x,y)}{\partial x}\\
+    \frac{\partial \hat{z}(x,y)}{\partial y} & = \frac{\partial z(u,v)}{\partial u} \frac{\partial u(x,y)}{\partial y}+
+    \frac{\partial z(u,v)}{\partial v} {\frac{\mathrm{d} v(y)}{\mathrm{d} y}}
+  \end{align}    
+
+  
+如果复合函数的某些中间变量本身又是复合函数的自变量
+设 :math:`u=\phi(x,y)` 、:math:`v=x` 及 :math:`w=y` 都在点 :math:`(x,y)` 具有对 :math:`x` 及对 :math:`y` 的偏导数，函数 :math:`z(u,v,w)=f(u,v,w)` 即 :math:`z=f(u,x,y)` 在对应点
+:math:`(u,v,w)` 具有连续偏导数，那么复合函数 
+
+.. math::
+  \hat{z}(x,y)=f(\phi(x,y),x,y)=\hat{f}(x,y)
