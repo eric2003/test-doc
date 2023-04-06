@@ -47,3 +47,35 @@ test1
   
 举个例子：
 
+.. math::
+  \begin{align}
+    y(u)=f(u)=2u\\
+    u(x)=g(x)=sin(x)\\
+    h(x)=f(g(x))=(f \circ g)(x)=2sin(x)
+  \end{align}
+  
+显然，这里的函数 :math:`y` 和 函数 :math:`h` 不是一回事。
+我们可以将变量换为任何记号，比如 :math:`y(u)=f(u)=2u` 或者 :math:`y(t)=f(t)=2t` 或者 :math:`y(x)=f(x)=2x`
+对于函数 :math:`h` 有 :math:`h(x)=2sin(x)` ,如果此时也记做 :math:`y(x)=2sin(x)` 则会造成歧义。
+
+.. math::
+  \begin{align}
+    y(u)=f(u)=2u\\
+    u(x)=g(x)=sin(x)\\
+   \hat{y}(x)=h(x)=f(g(x))=(f \circ g)(x)=2sin(x)
+  \end{align}
+  
+这里的函数 :math:`y` 和 函数 :math:`\hat{y}` 应该加以区分。
+
+.. math::
+  y(sin(x))=f(sin(x))=\hat{y}(x)=2sin(x)
+
+从这个角度来说，定理更合理的表述应该是：
+
+如果函数 :math:`u=g(x)` 在点 :math:`x` 可导，而函数 :math:`y=f(u)` 在对应点
+:math:`u=g(x)` 可导，那么复合函数 :math:`\hat{y}=f(g(x))` 在点 :math:`x` 可导，且有
+
+.. math::
+  \frac{\mathrm{d} \hat{y}(x)}{\mathrm{d} x}={f}'(u) \cdot {g}'(x) \quad  or \quad
+  \frac{\mathrm{d} \hat{y}(x)}{\mathrm{d} x}=\frac{\mathrm{d} y(u)}{\mathrm{d} u}\cdot \frac{\mathrm{d} u(x)}{\mathrm{d} x}
+
