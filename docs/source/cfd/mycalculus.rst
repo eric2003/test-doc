@@ -109,3 +109,62 @@ test1
 定理 2
 ```````````````
 
+如果函数 :math:`u=\phi(x,y)` 及 :math:`v=\psi(x,y)` 都在点 :math:`(x,y)` 具有对 :math:`x` 及对 :math:`y` 的偏导数，函数 :math:`z=f(u,v)` 在对应点
+:math:`(u,v)` 具有连续偏导数，那么复合函数 :math:`z=f(\phi(x,y),\psi(x,y))` 在点 :math:`(x,y)` 的两个偏导数都存在，且有
+
+.. math::
+  \begin{align}
+    \frac{\partial z}{\partial x} & = \frac{\partial z}{\partial u} \frac{\partial u}{\partial x}+
+    \frac{\partial z}{\partial v} \frac{\partial v}{\partial x}\\
+    \frac{\partial z}{\partial y} & = \frac{\partial z}{\partial u} \frac{\partial u}{\partial y}+
+    \frac{\partial z}{\partial v} \frac{\partial v}{\partial y}\\
+  \end{align}
+  
+类似的，设 :math:`u=\phi(x,y)` 、:math:`v=\psi(x,y)` 及 :math:`w=\omega(x,y)` 都在点 :math:`(x,y)` 具有对 :math:`x` 及对 :math:`y` 的偏导数，函数 :math:`z=f(u,v,w)` 在对应点
+:math:`(u,v,w)` 具有连续偏导数，那么复合函数 
+
+.. math::
+  z=f(\phi(x,y),\psi(x,y),\omega(x,y))
+
+在点 :math:`(x,y)` 的两个偏导数都存在，且有
+
+.. math::
+  \begin{align}
+    \frac{\partial z}{\partial x} & = \frac{\partial z}{\partial u} \frac{\partial u}{\partial x}+
+    \frac{\partial z}{\partial v} \frac{\partial v}{\partial x}+
+    \frac{\partial z}{\partial w} \frac{\partial w}{\partial x}\\
+    \frac{\partial z}{\partial y} & = \frac{\partial z}{\partial u} \frac{\partial u}{\partial y}+
+    \frac{\partial z}{\partial v} \frac{\partial v}{\partial y}+
+    \frac{\partial z}{\partial w} \frac{\partial w}{\partial y}
+  \end{align}
+  
+更准确的叙述：  
+如果函数 :math:`u=\phi(x,y)` 及 :math:`v=\psi(x,y)` 都在点 :math:`(x,y)` 具有对 :math:`x` 及对 :math:`y` 的偏导数，函数 :math:`z(u,v)=f(u,v)` 在对应点
+:math:`(u,v)` 具有连续偏导数，那么复合函数 :math:`\hat{z}(x,y)=f(\phi(x,y),\psi(x,y))` 在点 :math:`(x,y)` 的两个偏导数都存在，且有
+
+.. math::
+  \begin{align}
+    \frac{\partial \hat{z}(x,y)}{\partial x} & = \frac{\partial z(u,v)}{\partial u} \frac{\partial u(x,y)}{\partial x}+
+    \frac{\partial z(u,v)}{\partial v} \frac{\partial v(x,y)}{\partial x}\\
+    \frac{\partial \hat{z}(x,y)}{\partial y} & = \frac{\partial z(u,v)}{\partial u} \frac{\partial u(x,y)}{\partial y}+
+    \frac{\partial z(u,v)}{\partial v} \frac{\partial v(x,y)}{\partial y}\\
+  \end{align}
+  
+类似的，设 :math:`u=\phi(x,y)` 、:math:`v=\psi(x,y)` 及 :math:`w=\omega(x,y)` 都在点 :math:`(x,y)` 具有对 :math:`x` 及对 :math:`y` 的偏导数，函数 :math:`z(u,v,w)=f(u,v,w)` 在对应点
+:math:`(u,v,w)` 具有连续偏导数，那么复合函数 
+
+.. math::
+  \hat{z}(x,y)=f(\phi(x,y),\psi(x,y),\omega(x,y))
+
+在点 :math:`(x,y)` 的两个偏导数都存在，且有
+
+.. math::
+  \begin{align}
+    \frac{\partial \hat{z}(x,y)}{\partial x} & = \frac{\partial z(u,v,w)}{\partial u} \frac{\partial u(x,y)}{\partial x}+
+    \frac{\partial z(u,v,w)}{\partial v} \frac{\partial v(x,y)}{\partial x}+
+    \frac{\partial z(u,v,w)}{\partial w} \frac{\partial w(x,y)}{\partial x}\\
+    \frac{\partial \hat{z}(x,y)}{\partial y} & = \frac{\partial z(u,v,w)}{\partial u} \frac{\partial u(x,y)}{\partial y}+
+    \frac{\partial z(u,v,w)}{\partial v} \frac{\partial v(x,y)}{\partial y}+
+    \frac{\partial z(u,v,w)}{\partial w} \frac{\partial w(x,y)}{\partial y}
+  \end{align}  
+
