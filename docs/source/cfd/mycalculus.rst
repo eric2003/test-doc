@@ -168,3 +168,52 @@ test1
     \frac{\partial z(u,v,w)}{\partial w} \frac{\partial w(x,y)}{\partial y}
   \end{align}  
 
+定理 3
+```````````````
+
+如果函数 :math:`u=\phi(x,y)` 在点 :math:`(x,y)` 具有对 :math:`x` 及对 :math:`y`的偏导数，函数 :math:`v=\psi(y)` 在点 :math:`y` 可导，函数 :math:`z=f(u,v)` 在对应点
+:math:`(u,v)` 具有连续偏导数，那么复合函数 :math:`z=f(\phi(x,y),\psi(y))` 在点 :math:`(x,y)` 的两个偏导数都存在，且有
+
+.. math::
+  \begin{align}
+    \frac{\partial z}{\partial x} & = \frac{\partial z}{\partial u} \frac{\partial u}{\partial x}\\
+    \frac{\partial z}{\partial y} & = \frac{\partial z}{\partial u} \frac{\partial u}{\partial y}+
+    \frac{\partial z}{\partial v} \frac{\mathrm{d} v}{\mathrm{d} y}\\
+  \end{align}  
+  
+如果复合函数的某些中间变量本身又是复合函数的自变量
+设 :math:`u=\phi(x,y)` 、:math:`v=x` 及 :math:`w=y` 都在点 :math:`(x,y)` 具有对 :math:`x` 及对 :math:`y` 的偏导数，函数 :math:`z=f(u,v,w)` 即 :math:`z=f(u,x,y)` 在对应点
+:math:`(u,v,w)` 具有连续偏导数，那么复合函数 
+
+.. math::
+  z=f(\phi(x,y),x,y)
+
+有  
+
+.. math::
+  \begin{align}
+    \frac{\partial v}{\partial x}&=1, \quad \frac{\partial v}{\partial y}=0\\
+    \frac{\partial w}{\partial x}&=0, \quad \frac{\partial w}{\partial y}=1
+  \end{align}
+  
+继续，有 
+
+.. math::
+  \begin{align}
+    \frac{\partial z}{\partial x} & = \frac{\partial z}{\partial u} \frac{\partial u}{\partial x}+
+    \frac{\partial z}{\partial v} \cdot 1+
+    \frac{\partial z}{\partial w} \cdot 0\\
+    \frac{\partial z}{\partial y} & = \frac{\partial z}{\partial u} \frac{\partial u}{\partial y}+
+    \frac{\partial z}{\partial v} \cdot 0+
+    \frac{\partial z}{\partial w} \cdot 1
+  \end{align}
+  
+继续，有 
+
+.. math::
+  \begin{align}
+    \frac{\partial z}{\partial x} & = \frac{\partial z}{\partial u} \frac{\partial u}{\partial x}+
+    \frac{\partial z}{\partial v}\\
+    \frac{\partial z}{\partial y} & = \frac{\partial z}{\partial u} \frac{\partial u}{\partial y}+
+    \frac{\partial z}{\partial w}
+  \end{align}
