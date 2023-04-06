@@ -78,4 +78,34 @@ test1
 .. math::
   \frac{\mathrm{d} \hat{y}(x)}{\mathrm{d} x}={f}'(u) \cdot {g}'(x) \quad  or \quad
   \frac{\mathrm{d} \hat{y}(x)}{\mathrm{d} x}=\frac{\mathrm{d} y(u)}{\mathrm{d} u}\cdot \frac{\mathrm{d} u(x)}{\mathrm{d} x}
+  
+
+多元复合函数的求导法则
+--------------------------
+
+定理 1
+```````````````
+如果函数 :math:`u=\phi(t)` 及 :math:`v=\psi(t)` 都在点 :math:`t` 可导，函数 :math:`z=f(u,v)` 在对应点
+:math:`(u,v)` 具有连续偏导数，那么复合函数 :math:`z=f(\phi(t),\psi(t))` 在点 :math:`t` 可导，且有
+
+.. math::
+  \frac{\mathrm{d} z}{\mathrm{d} t}=\frac{\partial z}{\partial u} \frac{\mathrm{d} u}{\mathrm{d} t}+
+  \frac{\partial z}{\partial v} \frac{\mathrm{d} v}{\mathrm{d} t}
+  
+更准确的叙述：
+如果函数 :math:`u=\phi(t)` 及 :math:`v=\psi(t)` 都在点 :math:`t` 可导，函数 :math:`z(u,v)=f(u,v)` 在对应点
+:math:`(u,v)` 具有连续偏导数，那么复合函数 :math:`\hat{z}(t)=f(\phi(t),\psi(t))` 在点 :math:`t` 可导，且有
+
+.. math::
+  \frac{\mathrm{d} \hat{z}(t)}{\mathrm{d} t}=\frac{\partial z(u,v)}{\partial u} \frac{\mathrm{d} u(t)}{\mathrm{d} t}+
+  \frac{\partial z(u,v)}{\partial v} \frac{\mathrm{d} v(t)}{\mathrm{d} t}  
+  
+即：
+
+.. math::
+  \frac{\mathrm{d} \hat{z}(t)}{\mathrm{d} t}=\frac{\partial z(u,v)}{\partial u} \frac{\mathrm{d} u(t)}{\mathrm{d} t}+
+  \frac{\partial z(u,v)}{\partial v} \frac{\mathrm{d} v(t)}{\mathrm{d} t}  
+
+定理 2
+```````````````
 
