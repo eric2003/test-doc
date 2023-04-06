@@ -245,3 +245,85 @@ test1
 
 .. math::
   \hat{z}(x,y)=f(\phi(x,y),x,y)=\hat{f}(x,y)
+  
+  
+有：  
+  
+.. math::
+  \begin{align}
+    \frac{\partial \hat{z}(x,y)}{\partial x} & = \frac{\partial z(u,v,w)}{\partial u} \frac{\partial u(x,y)}{\partial x}+
+    \frac{\partial z(u,v,w)}{\partial v} \frac{\partial v(x,y)}{\partial x}+
+    \frac{\partial z(u,v,w)}{\partial w} \frac{\partial w(x,y)}{\partial x}\\
+    \frac{\partial \hat{z}(x,y)}{\partial y} & = \frac{\partial z(u,v,w)}{\partial u} \frac{\partial u(x,y)}{\partial y}+
+    \frac{\partial z(u,v,w)}{\partial v} \frac{\partial v(x,y)}{\partial y}+
+    \frac{\partial z(u,v,w)}{\partial w} \frac{\partial w(x,y)}{\partial y}
+  \end{align} 
+
+继续，有：  
+  
+.. math::
+  \begin{align}
+    \frac{\partial \hat{z}(x,y)}{\partial x} & = \frac{\partial z(u,v,w)}{\partial u} \frac{\partial u(x,y)}{\partial x}+
+    \frac{\partial z(u,v,w)}{\partial v} \cancelto{1}{\frac{\partial v(x,y)}{\partial x}}+
+    \frac{\partial z(u,v,w)}{\partial w} \cancelto{0}{\frac{\partial w(x,y)}{\partial x}}\\
+    \frac{\partial \hat{z}(x,y)}{\partial y} & = \frac{\partial z(u,v,w)}{\partial u} \frac{\partial u(x,y)}{\partial y}+
+    \frac{\partial z(u,v,w)}{\partial v} \cancelto{0}{\frac{\partial v(x,y)}{\partial y}}+
+    \frac{\partial z(u,v,w)}{\partial w} \cancelto{1}{\frac{\partial w(x,y)}{\partial y}}
+  \end{align}
+
+即：
+
+.. math::
+  \begin{align}
+    \frac{\partial \hat{z}(x,y)}{\partial x} & = \frac{\partial z(u,v,w)}{\partial u} \frac{\partial u(x,y)}{\partial x}+
+    \frac{\partial z(u,v,w)}{\partial v}\\
+    \frac{\partial \hat{z}(x,y)}{\partial y} & = \frac{\partial z(u,v,w)}{\partial u} \frac{\partial u(x,y)}{\partial y}+
+    \frac{\partial z(u,v,w)}{\partial w}
+  \end{align}
+  
+即：
+
+.. math::
+  \begin{align}
+    \frac{\partial \hat{z}(x,y)}{\partial x} & = \frac{\partial z(u,v,w)}{\partial u} \frac{\partial u(x,y)}{\partial x}+
+    \frac{\partial z(u,v,w)}{\partial x}\\
+    \frac{\partial \hat{z}(x,y)}{\partial y} & = \frac{\partial z(u,v,w)}{\partial u} \frac{\partial u(x,y)}{\partial y}+
+    \frac{\partial z(u,v,w)}{\partial y}
+  \end{align}  
+  
+也可以写成：
+
+.. math::
+  \begin{align}
+    \frac{\partial \hat{z}(x,y)}{\partial x} & = \frac{\partial f(u,v,w)}{\partial u} \frac{\partial u(x,y)}{\partial x}+
+    \frac{\partial f(u,v,w)}{\partial x}\\
+    \frac{\partial \hat{z}(x,y)}{\partial y} & = \frac{\partial f(u,v,w)}{\partial u} \frac{\partial u(x,y)}{\partial y}+
+    \frac{\partial f(u,v,w)}{\partial y}
+  \end{align}  
+
+继续，也可以写成：
+
+.. math::
+  \begin{align}
+    \frac{\partial \hat{z}(x,y)}{\partial x} & = \frac{\partial f(u,x,y)}{\partial u} \frac{\partial u(x,y)}{\partial x}+
+    \frac{\partial f(u,x,y)}{\partial x}\\
+    \frac{\partial \hat{z}(x,y)}{\partial y} & = \frac{\partial f(u,x,y)}{\partial u} \frac{\partial u(x,y)}{\partial y}+
+    \frac{\partial f(u,x,y)}{\partial y}
+  \end{align} 
+  
+需要注意的是，虽然数值上有：
+
+.. math::
+  \begin{align}
+    \hat{z}(x,y)&= \hat{f}(x,y)=z(u(x,y),x,y)=f(u(x,y),x,y)\\
+  \end{align}
+  
+但是，函数形式上  
+
+.. math::
+  \begin{align}
+    \hat{z}&\ne z\\
+    \hat{f}&\ne f\\
+    \hat{z}&\equiv \hat{f}\\
+    {z}&\equiv {f}\\
+  \end{align}
