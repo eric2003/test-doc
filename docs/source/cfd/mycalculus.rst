@@ -1,5 +1,11 @@
-Calculus
+MyCalculus
 ==================================
+
+test1
+---------------------------
+
+中文
+---------------------------
 
 一元复合函数的求导法则
 --------------------------
@@ -15,6 +21,7 @@ Calculus
   
 严格来说函数 :math:`y=f(u)` 实际上只是 :math:`u` 的函数，并不是 :math:`x` 的函数。
 而 :math:`h(x)=(f\circ g)(x)` 才是 :math:`x` 的函数。这种记号上的随意会在复杂问题上造成困扰。
+
 
 .. math::
   \begin{align}
@@ -160,7 +167,7 @@ Calculus
     \frac{\partial z(u,v,w)}{\partial v} \frac{\partial v(x,y)}{\partial y}+
     \frac{\partial z(u,v,w)}{\partial w} \frac{\partial w(x,y)}{\partial y}
   \end{align}  
-  
+
 定理 3
 ```````````````
 
@@ -211,8 +218,9 @@ Calculus
     \frac{\partial z}{\partial w}
   \end{align}
   
+  
 更准确的叙述：  
-如果函数 :math:`u=\phi(x,y)` 在点 :math:`(x,y)` 具有对 :math:`x` 及对 :math:`y`的偏导数，函数 :math:`v=\psi(y)` 在点 :math:`y` 可导，函数 :math:`z(u,v)=f(u,v)` 在对应点
+如果函数 :math:`u=\phi(x,y)` 在点 :math:`(x,y)` 具有对 :math:`x` 及对 :math:`y` 的偏导数，函数 :math:`v=\psi(y)` 在点 :math:`y` 可导，函数 :math:`z(u,v)=f(u,v)` 在对应点
 :math:`(u,v)` 具有连续偏导数，那么复合函数 :math:`\hat{z}(x,y)=f(\phi(x,y),\psi(y))=\hat{f}(x,y)` 在点 :math:`(x,y)` 的两个偏导数都存在，且有
 
 .. math::
@@ -237,6 +245,7 @@ Calculus
 
 .. math::
   \hat{z}(x,y)=f(\phi(x,y),x,y)=\hat{f}(x,y)
+  
   
 有：  
   
